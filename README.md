@@ -5,6 +5,7 @@ You can direct access to the website and explore from this link.
 https://celestium.tech/
 
 In the Unity Folder you can get WebGL files for Puzzles and VR simulation
+In wp-content/themes/astra you will find the necessary HTML and CSS files for styling
 
 
 
