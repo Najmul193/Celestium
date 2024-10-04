@@ -11,3 +11,5 @@ In wp-content/themes/astra you will find the necessary HTML and CSS files for st
 In wp-content/themes/astra/functions.php you will get necessary codes to implement NASA IMAGE AND LIBRARY API. The code is configured so that only JWST related images are shown. You can configure the code as per your wish
 
 In wp-content/plugins you will find the plugins we used to build this web application
+
+In wp-content/uploads you will find the Images we used and the audio files we used
