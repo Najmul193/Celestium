@@ -1,0 +1,188 @@
+.elementor-1215 .elementor-element.elementor-element-23b6e95{--display:flex;--background-transition:0.3s;}.elementor-1215 .elementor-element.elementor-element-e7432b8{--display:flex;--background-transition:0.3s;}.elementor-1215 .elementor-element.elementor-element-70110493{--display:flex;--background-transition:0.3s;}.elementor-1215 .elementor-element.elementor-element-70110493:not(.elementor-motion-effects-element-type-background), .elementor-1215 .elementor-element.elementor-element-70110493 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-color:#00000000;}.elementor-1215 .elementor-element.elementor-element-70110493, .elementor-1215 .elementor-element.elementor-element-70110493::before{--border-transition:0.3s;}/* Start custom CSS for container, class: .elementor-element-e7432b8 */.container {
+    text-align: center;
+    padding: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    animation: glowText 2s ease-in-out infinite alternate;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    animation: float 3s ease-in-out infinite;
+}
+
+.box h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.box p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes glowText {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 70px #ff00ff;
+    }
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 70px #ff00ff, 0 0 80px #ff00ff;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}/* End custom CSS */
+/* Start custom CSS for container, class: .elementor-element-70110493 *//* Center the timeline horizontally */
+.timeline {
+    width: 80%;
+    max-width: 800px;
+    position: relative;
+    margin: 0 auto; /* Centers horizontally */
+    padding: 0 10px;
+}
+
+/* Title Styling with Blue Neon */
+h1.timeline-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #00bfff;  /* Blue Neon */
+    text-shadow: 0 0 10px rgba(0, 191, 255, 0.8), 0 0 20px rgba(0, 191, 255, 0.6);
+    animation: glowTitle 2s infinite alternate;
+    width: 100%;  /* Ensure the title takes up the full width */
+    display: flex;
+    justify-content: center;  /* Center the title horizontally */
+}
+
+/* Timeline Item */
+.timeline-item {
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    float: right;
+    text-align: right;
+    padding-right: 50px;
+}
+
+/* Timeline Content */
+.timeline-content {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #00bfff;  /* Blue Neon border */
+    position: relative;
+    box-shadow: 0 4px 30px rgba(0, 191, 255, 0.3);
+}
+
+.timeline-content:before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: -16px;
+    width: 15px;
+    height: 15px;
+    background-color: #00bfff;  /* Blue Neon dot */
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 191, 255, 0.5);
+}
+
+/* Subtitle Styling (Headers for timeline events) */
+.timeline-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #00bfff;  /* Blue Neon */
+    text-shadow: 0 0 5px rgba(0, 191, 255, 0.8), 0 0 15px rgba(0, 191, 255, 0.6);
+}
+
+.timeline-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Glowing animation */
+@keyframes glowTitle {
+    from {
+        text-shadow: 0 0 10px rgba(0, 191, 255, 0.8), 0 0 20px rgba(0, 191, 255, 0.6);
+    }
+    to {
+        text-shadow: 0 0 20px rgba(0, 191, 255, 1), 0 0 40px rgba(0, 191, 255, 0.8);
+    }
+}
+
+/* Fade In Animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.timeline-item:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.timeline-item:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.timeline-item:nth-child(3) {
+    animation-delay: 1.5s;
+}
+
+.timeline-item:nth-child(4) {
+    animation-delay: 2s;
+}
+
+.timeline-item:nth-child(5) {
+    animation-delay: 2.5s;
+}
+
+.timeline-item:nth-child(6) {
+    animation-delay: 3s;
+}/* End custom CSS */

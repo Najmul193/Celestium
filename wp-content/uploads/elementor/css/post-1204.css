@@ -1,0 +1,132 @@
+.elementor-1204 .elementor-element.elementor-element-63ce759{--display:flex;--justify-content:flex-start;--align-items:flex-end;--container-widget-width:calc( ( 1 - var( --container-widget-flex-grow ) ) * 100% );--background-transition:0.3s;}.elementor-1204 .elementor-element.elementor-element-63ce759:not(.elementor-motion-effects-element-type-background), .elementor-1204 .elementor-element.elementor-element-63ce759 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-color:#000000;}.elementor-1204 .elementor-element.elementor-element-63ce759, .elementor-1204 .elementor-element.elementor-element-63ce759::before{--border-transition:0.3s;}/* Start custom CSS for container, class: .elementor-element-63ce759 *//* Body and General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: radial-gradient(circle at 50% 50%, #1e1e1e, #000);
+}
+
+/* Center the timeline horizontally */
+.timeline {
+    width: 80%;
+    max-width: 800px;
+    position: relative;
+    margin: 0 auto; /* Centers horizontally */
+    padding: 0 10px;
+}
+
+/* Title Styling */
+h1.timeline-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #ffcc00;
+    text-shadow: 0 0 10px rgba(255, 204, 0, 0.8);
+    animation: glowTitle 2s infinite alternate;
+    width: 100%;  /* Ensure the title takes up the full width */
+    display: flex;
+    justify-content: center;  /* Center the title horizontally */
+}
+
+
+/* Timeline Item */
+.timeline-item {
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    float: right;
+    text-align: right;
+    padding-right: 50px;
+}
+
+/* Timeline Content */
+.timeline-content {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #ffcc00;
+    position: relative;
+    box-shadow: 0 4px 30px rgba(255, 204, 0, 0.3);
+}
+
+.timeline-content:before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: -16px;
+    width: 15px;
+    height: 15px;
+    background-color: #ffcc00;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(255, 204, 0, 0.5);
+}
+
+.timeline-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #ffcc00;
+    text-shadow: 0 0 5px rgba(255, 204, 0, 0.8);
+}
+
+.timeline-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Glowing animation */
+@keyframes glowTitle {
+    from {
+        text-shadow: 0 0 10px rgba(255, 204, 0, 0.8), 0 0 20px rgba(255, 204, 0, 0.6);
+    }
+    to {
+        text-shadow: 0 0 20px rgba(255, 204, 0, 1), 0 0 40px rgba(255, 204, 0, 0.8);
+    }
+}
+
+/* Fade In Animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.timeline-item:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.timeline-item:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.timeline-item:nth-child(3) {
+    animation-delay: 1.5s;
+}
+
+.timeline-item:nth-child(4) {
+    animation-delay: 2s;
+}
+
+.timeline-item:nth-child(5) {
+    animation-delay: 2.5s;
+}
+
+.timeline-item:nth-child(6) {
+    animation-delay: 3s;
+}/* End custom CSS */
