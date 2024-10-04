@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autoplay Audio</title>
+</head>
+<body>
+  <audio id="background-audio" loop>
+    <source src="https://celestium.tech/wp-content/uploads/2024/10/Question-Mark-Galaxy.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var audio = document.getElementById('background-audio');
+      var playButton = document.createElement('button');
+      playButton.innerText = 'Play Audio';
+      playButton.style.position = 'fixed';
+      playButton.style.top = '10px';
+      playButton.style.left = '10px';
+      playButton.style.zIndex = 1000;
+      playButton.style.display = 'none'; // Hide the button initially
+      document.body.appendChild(playButton);
+
+      var playAudio = function() {
+        var playPromise = audio.play();
+
+        if (playPromise !== undefined) {
+          playPromise.then(function() {
+            // Audio is playing, change button to "Pause Audio"
+            playButton.innerText = 'Pause Audio';
+            playButton.style.display = 'block'; // Show the button
+            playButton.removeEventListener('click', playAudio);
+            playButton.addEventListener('click', pauseAudio);
+          }).catch(function(error) {
+            console.log('Autoplay was prevented:', error);
+            playButton.style.display = 'block'; // Show the button if autoplay is blocked
+          });
+        }
+      };
+
+      var pauseAudio = function() {
+        audio.pause();
+        playButton.innerText = 'Play Audio';
+        playButton.removeEventListener('click', pauseAudio);
+        playButton.addEventListener('click', playAudio);
+      };
+
+      playButton.addEventListener('click', playAudio);
+
+      // Try to autoplay
+      playAudio();
+    });
+  </script>
+</body>
+</html>
